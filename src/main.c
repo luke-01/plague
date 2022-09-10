@@ -1,4 +1,8 @@
 #include <stdio.h>
+
+#define VOLK_IMPLEMENTATION
+#include <volk.h>
+
 #include <GLFW/glfw3.h>
 
 enum {
@@ -9,6 +13,11 @@ enum {
 int main(void) {
 	if (!glfwInit()) {
 		fprintf(stderr, "failed to initialize GLFW\n");
+		return 1;
+	}
+	
+	if (volkInitialize() != VK_SUCCESS) {
+		fprintf(stderr, "failed to initialize volk\n");
 		return 1;
 	}
 

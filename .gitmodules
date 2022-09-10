@@ -2,3 +2,6 @@
 	path = extern/glfw
 	url = https://github.com/glfw/glfw
 	branch = 3.3-stable
+[submodule "extern/volk"]
+	path = extern/volk
+	url = https://github.com/luke-01/volk.git
