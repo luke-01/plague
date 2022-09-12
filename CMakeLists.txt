@@ -7,7 +7,7 @@ add_subdirectory(extern/glfw)
 set(VOLK_HEADERS_ONLY ON)
 add_subdirectory(extern/volk)
 
-add_executable(plague src/main.c)
+add_executable(plague src/main.c src/memory_arena.c)
 
 target_link_libraries(plague 
 	PRIVATE glfw
